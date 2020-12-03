@@ -1,0 +1,18 @@
+Líneas de comando necesarias a ejecutar desde la consola del SO "invitado". Testado en Ubuntu y Lubuntu. A  continuación detallo los pasos a seguir.
+
+Abrir terminal  y ejecutar la siguiente línea con sudo:
+  
+// sudo nano /etc/default/grub
+
+se abre una configuración y editar la siguiente línea: 
+
+// GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+Deberá quedar así:
+
+// GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
+
+guardar los cambios y volver a consola. Ejecutar el siguiente comando:
+
+// sudo update-grub
+// reboot
